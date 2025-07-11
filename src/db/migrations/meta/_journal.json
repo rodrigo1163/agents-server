@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1752005370751,
+      "tag": "0000_last_firebird",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1752094193180,
+      "tag": "0001_even_speed",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752191176463,
+      "tag": "0002_brief_cammi",
+      "breakpoints": true
+    }
+  ]
+}
