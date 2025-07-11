@@ -2,6 +2,29 @@
 
 Projeto desenvolvido durante o evento **NLW (Next Level Week)** da [Rocketseat](https://rocketseat.com.br), focado na criação de uma aplicação backend com Node.js e integração com inteligência artificial.
 
+## 🤖 Sobre o Projeto
+
+O **NLW Agents** é uma plataforma backend robusta que alimenta uma aplicação web moderna para criação e gerenciamento de salas interativas com integração de inteligência artificial. Este servidor backend fornece:
+
+- **API REST completa** para gerenciamento de salas e perguntas
+- **Processamento de áudio** com conversão para texto e análise por IA
+- **Integração com Google Gemini** para respostas inteligentes automatizadas
+- **Armazenamento vetorial** utilizando pgvector para funcionalidades de IA/ML
+- **Sistema de tempo real** para interações síncronas entre usuários
+
+### Funcionalidades Principais
+
+- **Criação e gerenciamento de salas temáticas**
+- **Sistema de perguntas em tempo real**
+- **Processamento de áudio** com transcrição automática
+- **Integração com IA** para geração de respostas contextuais
+- **Armazenamento otimizado** com PostgreSQL e extensões vetoriais
+- **API type-safe** com validação completa de dados
+
+O backend serve como a base sólida para uma experiência de usuário fluida e responsiva, demonstrando na prática como construir APIs escaláveis integradas com inteligência artificial moderna.
+
+> **📋 Projeto Backend**: Esta é a API do NLW Agents. Para uma experiência completa, recomenda-se também configurar o frontend web que consome esta API.
+
 ## 🚀 Tecnologias Utilizadas
 
 ### Backend
@@ -17,6 +40,12 @@ Projeto desenvolvido durante o evento **NLW (Next Level Week)** da [Rocketseat](
 
 - **Docker** - Containerização
 - **pgvector** - Extensão PostgreSQL para vetores (AI/ML)
+
+### Inteligência Artificial
+
+- **Google Gemini API** - Modelo de linguagem para processamento de texto e áudio
+- **Embeddings vetoriais** - Armazenamento e busca semântica com pgvector
+- **Processamento de áudio** - Transcrição automática e análise contextual
 
 ## 🏗️ Padrões de Projeto
 
@@ -86,7 +115,11 @@ A API estará disponível em `http://localhost:3333`
 ### Principais rotas:
 
 - `GET /health` - Health check da aplicação
-- `GET /rooms` - Lista as salas disponíveis
+- `GET /rooms` - Lista todas as salas disponíveis
+- `POST /rooms` - Cria uma nova sala temática
+- `GET /rooms/:roomId/questions` - Lista as perguntas de uma sala específica
+- `POST /rooms/:roomId/questions` - Cria uma nova pergunta em uma sala
+- `POST /upload-audio` - Upload e processamento de áudio com transcrição automática
 
 ## 🐳 Docker
 
